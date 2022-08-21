@@ -13,9 +13,19 @@ session_start();
         * {
             font-family: "Trebuchet MS";
         }
+        
+        h1 {
+            text-transform: uppercase;
+            color: #34e8eb;
+            float: right;
+            font-family: "Marker Felt, fantasy";
+            font-size: 40px;
+            margin-right: 140px;
+        }
     </style>
 </head>
 <body>
+    <h1>Sportifun</h1>
     <script src="script.js"></script>
 </body>
 </html>
