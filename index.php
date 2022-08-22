@@ -39,6 +39,13 @@ error_reporting(0);
 <body>
     <h1>Sportifun</h1>
     <h2>Data Product</h2>
+    <a href = "add_product.php">+ &nbsp; Add product</a>
+    <br>
+    <img src = "phoo2.jpg" alt = "Trulli" width = "500" height = "300">
+
+    <br><br>
+        <a href = "logout.php">Logout</a>
+        <h1><?php date_default_timezone_set("Asia/Jakarta"); echo date("l, d F Y h:i a"); ?></h1>
     <script src="script.js"></script>
 </body>
 </html>
