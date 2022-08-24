@@ -39,5 +39,3 @@ if($image != "") {
         echo "<script>alert('Data added successfully!'); window.location = 'index.php';</script>";
     }
 }
-
-?>

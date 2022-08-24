@@ -8,7 +8,7 @@
 }
 
 body {
-    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(bg12.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(bg12.jpg);
     background-position: center;
     background-size: cover;
     display: flex;
@@ -23,7 +23,7 @@ body {
     min-height: 400px;
     background: white;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
     padding: 40px 30px;
 }
 
@@ -48,7 +48,7 @@ body {
     padding: 12px;
     margin: 10px;
     border-radius: 3px;
-    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
     text-decoration: none;
     font-size: 1rem;
     text-align: center;
@@ -110,7 +110,8 @@ body {
     transition: .3s;
 }
 
-.container .login-email .input-group input:focus, .container .login-email .input-group input:valid {
+.container .login-email .input-group input:focus,
+.container .login-email .input-group input:valid {
     border-color: #34e8eb;
 }
 
@@ -148,9 +149,11 @@ body {
     .container {
         width: 300px;
     }
+
     .container .login-social {
         display: block;
     }
+
     .container .login-social a {
         display: block;
     }
