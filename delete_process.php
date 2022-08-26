@@ -9,5 +9,3 @@ if(!$result) {
 } else {
     echo "<script>alert('Data delete successfully!'); window.location = 'index.php';</script>";
 }
-
-?>

@@ -1,17 +1,17 @@
 <?php include('connection.php');
 
-if(isset($_GET['id'])) {
+if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $query = "SELECT * FROM product where id = '$id'";
     $result = mysqli_query($conn, $query);
 
-    if(!$result) {
+    if (!$result) {
         die("Query error: " . mysqli_error($conn));
     }
 
     $data = mysqli_fetch_assoc($result);
 
-    if(!count($data)) {
+    if (!count($data)) {
         echo "<script>alert('Data not found.'); window.location = 'index.php';</script>";
     }
 } else {
@@ -21,19 +21,20 @@ if(isset($_GET['id'])) {
 ?>
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Sportifun</title>
-        <style type = "text/css">
+
+<head>
+    <title>Sportifun</title>
+    <style type="text/css">
         * {
             font-family: "Trebuchet MS";
         }
 
         body {
-            background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url(bg12.jpg);
+            background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(bg12.jpg);
             background-position: center;
             background-size: cover;
         }
-        
+
         .edit-text {
             text-transform: uppercase;
             color: #34e8eb;
@@ -56,7 +57,7 @@ if(isset($_GET['id'])) {
             min-height: 400px;
             background: white;
             border-radius: 5px;
-            box-shadow: 0 0 5px rgba(0,0,0,.3);
+            box-shadow: 0 0 5px rgba(0, 0, 0, .3);
             padding: 40px 30px;
             margin-left: 80px;
         }
@@ -97,41 +98,42 @@ if(isset($_GET['id'])) {
             border: 0;
             margin-top: 20px;
         }
-        </style>
-    </head>
+    </style>
+</head>
 
-    <body>
-        <p class = "edit-text">Edit Product <?php echo $data['name_product']; ?></p>
-        <form method = "POST" action = "edit_process.php" enctype = "multipart/form-data">
-        <section class = "base">
+<body>
+    <p class="edit-text">Edit Product <?php echo $data['name_product']; ?></p>
+    <form method="POST" action="edit_process.php" enctype="multipart/form-data">
+        <section class="base">
             <div>
                 <label>Name</label>
-                <input type = "text" name = "name" autofocus = "" required = "" value = "<?php echo $data['name_product']; ?>"/>
-                <input type = "hidden" name = "id" value = "<?php echo $data['id']; ?>"/>
+                <input type="text" name="name" autofocus="" required="" value="<?php echo $data['name_product']; ?>" />
+                <input type="hidden" name="id" value="<?php echo $data['id']; ?>" />
             </div>
             <div>
                 <label>Description</label>
-                <input type = "text" name = "desc"  value = "<?php echo $data['description']; ?>"/>
+                <input type="text" name="desc" value="<?php echo $data['description']; ?>" />
             </div>
             <div>
                 <label>Buy Price</label>
-                <input type = "text" name = "buy" required = "" value = "<?php echo $data['buy_price']; ?>"/>
+                <input type="text" name="buy" required="" value="<?php echo $data['buy_price']; ?>" />
             </div>
             <div>
                 <label>Sell Price</label>
-                <input type = "text" name = "sell" required = "" value = "<?php echo $data['sell_price']; ?>"/>
+                <input type="text" name="sell" required="" value="<?php echo $data['sell_price']; ?>" />
             </div>
             <div>
                 <label>Image</label>
-                <img src = "gambar/<?php echo $data['image_product']; ?>" style = "width: 120px; float: left; margin-botton: 5px;">
-                <input type = "file" name = "image"  />
-                <i style = "float: left; font-size: 11px; color: red;">Ignore if you do not put a picture</i>
+                <img src="gambar/<?php echo $data['image_product']; ?>" style="width: 120px; float: left; margin-botton: 5px;">
+                <input type="file" name="image" />
+                <i style="float: left; font-size: 11px; color: red;">Ignore if you do not put a picture</i>
             </div>
             <div>
                 <br>
-                <button type = "submit">Save</button>
+                <button type="submit">Save</button>
             </div>
         </section>
-        </form>
-    </body>
+    </form>
+</body>
+
 </html>

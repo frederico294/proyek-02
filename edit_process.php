@@ -40,5 +40,3 @@ if($image != "") {
         echo "<script>alert('Data change successfully!'); window.location = 'index.php';</script>";
     }
 }
-
-?>
